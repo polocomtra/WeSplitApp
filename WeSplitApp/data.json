@@ -1,0 +1,198 @@
+﻿[
+  {
+    "ID": 0,
+    "Name": "Chuyen Di 01",
+    "Place": "Hòn Khói",
+    "Images": [
+      "salt-3060092_1280.jpg",
+      "salt-3060095_1280.jpg",
+      "salt-3022093_1280.jpg",
+      "salt-3022094_1280.jpg"
+    ],
+    "Status": 0,
+    "Members": [
+      {
+        "Name": "Vũ Việt Hồng",
+        "Expenses": [
+          {
+            "Description": "Taxi",
+            "Cost": 123000
+          },
+          {
+            "Description": "Khách sạn",
+            "Cost": 451000
+          }
+        ]
+      },
+
+      {
+        "Name": "Võ Hiệp Vũ",
+        "Expenses": [
+          {
+            "Description": "Đồ ăn",
+            "Cost": 1234000
+          },
+          {
+            "Description": "Nước uống",
+            "Cost": 105000
+          }
+        ]
+      },
+      {
+        "Name": "Thảo Quang Lâm",
+        "Expenses": []
+      },
+      {
+        "Name": "Nguyễn Gia Ðức",
+        "Expenses": [
+          {
+            "Description": "Khác",
+            "Cost": 3120000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": 1,
+    "Name": "Chuyen Di 02",
+    "Place": "Vũng Tàu",
+    "Images": [
+      "beach-3264058_1280.jpg",
+      "sunset-165077_1280.jpg",
+      "fishermen-2983615_1280.jpg"
+    ],
+    "Status": 1,
+
+    "Members": [
+      {
+        "Name": "Võ Tuấn Tài",
+        "Expenses": [
+          {
+            "Description": "Taxi",
+            "Cost": 261000
+          },
+          {
+            "Description": "Taxi",
+            "Cost": 41000
+          },
+          {
+            "Description": "Khác",
+            "Cost": 318000
+          }
+        ]
+      },
+
+      {
+        "Name": "Lưu Cao Tiến",
+        "Expenses": [
+        ]
+      },
+      {
+        "Name": "Vưu Quốc Văn",
+        "Expenses": []
+      }
+    ]
+  },
+  {
+    "ID": 2,
+    "Name": "Chuyen Di 03",
+    "Place": "Chè Xanh Thái Nguyên",
+    "Images": [
+      "dawn-2264494_1280.jpg",
+      "tea-5112953_1280.jpg"
+    ],
+    "Status": 1,
+
+    "Members": [
+      {
+        "Name": "Nguyễn Quyết Thắng",
+        "Expenses": [
+          {
+            "Description": "Khách sạn",
+            "Cost": 361000
+          },
+          {
+            "Description": "Khách sạn",
+            "Cost": 102000
+          }
+        ]
+      },
+
+      {
+        "Name": "Lưu Hoàng Khôi",
+        "Expenses": [
+          {
+            "Description": "Đồ ăn",
+            "Cost": 281000
+          },
+          {
+            "Description": "Đồ ăn",
+            "Cost": 105000
+          }
+        ]
+      },
+      {
+        "Name": "Lâm Thanh Vinh",
+        "Expenses": []
+      }
+    ]
+  },
+  {
+    "ID": 3,
+    "Name": "Chuyen Di 02",
+    "Place": "Vũng Tàu",
+    "Images": [
+      "beach-3264058_1280.jpg",
+      "sunset-165077_1280.jpg",
+      "fishermen-2983615_1280.jpg"
+    ],
+    "Status": 1,
+    "Members": [
+      {
+        "Name": "Võ Tuấn Tài",
+        "Expenses": []
+      },
+
+      {
+        "Name": "Lưu Cao Tiến",
+        "Expenses": []
+      },
+      {
+        "Name": "Vưu Quốc Văn",
+        "Expenses": []
+      }
+    ]
+  },
+  {
+    "ID": 4,
+    "Name": "Chuyen Di 04",
+    "Place": "Ruộng Lúa",
+    "Images": [
+      "nature-4953021_1280.jpg",
+      "sunset-5222626_1280.jpg",
+      "rice-cultivation-4165415_1280.jpg",
+      "field-3268388_1280.jpg"
+    ],
+    "Status": 2,
+    "Members": [
+      {
+        "Name": "Phạm Công Hiếu",
+        "Expenses": []
+      },
+
+      {
+        "Name": "Lý Gia Hoàng",
+        "Expenses": []
+      },
+      {
+        "Name": "Dữu Phước Nhân",
+        "Expenses": []
+      },
+      {
+        "Name": "Dương Thành Thiện",
+        "Expenses": []
+      }
+    ]
+  }
+]

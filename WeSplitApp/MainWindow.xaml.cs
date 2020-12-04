@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WeSplitApp.Models;
 using WeSplitApp.View;
 
 namespace WeSplitApp
@@ -25,6 +26,8 @@ namespace WeSplitApp
         public MainWindow()
         {
             InitializeComponent();
+            var list = TripDAO.GetAll();
+            list.ForEach(e => Debug.WriteLine(e));
         }
 
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -8,6 +8,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/road_icon.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/beach-3264058_1280.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/dawn-2264494_1280.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/field-3268388_1280.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/fishermen-2983615_1280.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/nature-4953021_1280.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/rice-cultivation-4165415_1280.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/salt-3022093_1280.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/salt-3022094_1280.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/salt-3060092_1280.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/salt-3060095_1280.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/salt-harvesting-3060093_1280.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/sunset-165077_1280.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/sunset-5222626_1280.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/trip/tea-5112953_1280.jpg")]
 
 
