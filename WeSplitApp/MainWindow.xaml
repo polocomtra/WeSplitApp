@@ -13,7 +13,7 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="WeSplit" Height="auto" Width="auto" WindowStartupLocation="CenterScreen" ResizeMode="CanResize" Icon="Images/road_icon.ico">
+        Title="WeSplit" Height="650" Width="1024" WindowStartupLocation="CenterScreen" ResizeMode="CanResize" Icon="Images/road_icon.ico">
     <Grid MouseDown="Grid_MouseDown">
         <DockPanel LastChildFill="True">
             <Grid DockPanel.Dock="Top" Background="#25C5E6" Height="50">

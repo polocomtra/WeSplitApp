@@ -5,8 +5,74 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WeSplitApp.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#fff">
-        <TextBlock FontSize="50">Home</TextBlock>
-    </Grid>
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:local1="clr-namespace:WeSplitApp.Converter"
+             d:DesignHeight="650" d:DesignWidth="1024">
+    <UserControl.Resources>
+        <local1:AbsoluteConverter x:Key="AbsoluteConverter"></local1:AbsoluteConverter>
+    </UserControl.Resources>
+    <DockPanel Background="#fefefe" LastChildFill="True">
+        <TextBlock DockPanel.Dock="Top"  Text="DANH SÁCH CHUYẾN ĐI" FontSize="23" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#001EC7" Padding="0 10 0 0" ></TextBlock>
+        <StackPanel Orientation="Vertical" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <Separator />
+            <StackPanel>
+                <TextBlock Text="Tất cả chuyến đi" FontSize="18" FontWeight="DemiBold" FontStyle="Italic" Padding="10 0 0 0"></TextBlock>
+                <ListView x:Name="allJourney" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel></WrapPanel>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Image Source="{Binding Images[0],Converter={StaticResource AbsoluteConverter}}" Width="90" Height="90" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold"></TextBlock>
+                                <TextBlock Text="{Binding Place}" FontSize="14" FontWeight="DemiBold"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+            <Separator />
+            <StackPanel>
+                <TextBlock Text="Đã đi" FontSize="18" FontWeight="DemiBold" FontStyle="Italic" Padding="10 0 0 0"></TextBlock>
+                <ListView x:Name="completedJourney" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel></WrapPanel>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Image Source="{Binding Images[0],Converter={StaticResource AbsoluteConverter}}" Width="90" Height="90" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold"></TextBlock>
+                                <TextBlock Text="{Binding Place}" FontSize="14" FontWeight="DemiBold"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+            <Separator />
+            <StackPanel>
+                <TextBlock Text="Đang đi" FontSize="18" FontWeight="DemiBold" FontStyle="Italic" Padding="10 0 0 0"></TextBlock>
+                <ListView x:Name="currentJourney" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel></WrapPanel>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Image Source="{Binding Images[0],Converter={StaticResource AbsoluteConverter}}" Width="90" Height="90" RenderOptions.BitmapScalingMode="HighQuality"></Image>
+                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold"></TextBlock>
+                                <TextBlock Text="{Binding Place}" FontSize="14" FontWeight="DemiBold"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </StackPanel>
+    </DockPanel>
 </UserControl>
