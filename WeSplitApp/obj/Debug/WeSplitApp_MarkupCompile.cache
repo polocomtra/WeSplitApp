@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\
+D:\Homework\7\win\project2\WeSplitApp\WeSplitApp\obj\Debug\
 WeSplitApp
 none
 false
 DEBUG;TRACE
-C:\Users\v\source\repos\WeSplitApp\WeSplitApp\App.xaml
-4-777926069
+D:\Homework\7\win\project2\WeSplitApp\WeSplitApp\App.xaml
+51392915064
 
-111405470543
-16-1269430509
-MainWindow.xaml;View\AddScreen.xaml;View\DetailScreen.xaml;View\HomeScreen.xaml;
+122006104267
+171698277211
+MainWindow.xaml;SplashScreen.xaml;View\AddScreen.xaml;View\DetailScreen.xaml;View\HomeScreen.xaml;
 
 False
 
