@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WeSplitApp.Models;
 using WeSplitApp.View;
+using WeSplitApp.View.AddScreen;
 
 namespace WeSplitApp
 {

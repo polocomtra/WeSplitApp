@@ -74,7 +74,13 @@
     <Compile Include="SplashScreen.xaml.cs">
       <DependentUpon>SplashScreen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\AddScreen.xaml.cs">
+    <Compile Include="View\AddScreen\AddExpenses.xaml.cs">
+      <DependentUpon>AddExpenses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddScreen\AddMembers.xaml.cs">
+      <DependentUpon>AddMembers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddScreen\AddScreen.xaml.cs">
       <DependentUpon>AddScreen.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\DetailScreen.xaml.cs">
@@ -99,7 +105,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\AddScreen.xaml">
+    <Page Include="Style\IconButtonStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\AddScreen\AddExpenses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddScreen\AddMembers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddScreen\AddScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
