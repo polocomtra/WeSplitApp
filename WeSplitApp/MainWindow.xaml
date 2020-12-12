@@ -25,7 +25,7 @@
                     <Image Source="Images/road_icon.ico" Width="50" Height="50" RenderOptions.BitmapScalingMode="HighQuality"></Image>
                     <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="19" FontWeight="ExtraBlack" Text="WeSplit App"></TextBlock>
                 </StackPanel>
-                <ListView Grid.Column="1" x:Name="ListViewMenu" Margin="250 0 0 0" FontSize="18" SelectionChanged="ListViewMenu_SelectionChanged" SelectedIndex="0">
+                <ListView Grid.Column="1" x:Name="ListViewMenu" Margin="250 0 0 0" FontSize="18" SelectionChanged="ListViewMenu_SelectionChanged">
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Orientation="Horizontal"></StackPanel>

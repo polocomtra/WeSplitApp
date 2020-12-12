@@ -29,6 +29,7 @@ namespace WeSplitApp
             InitializeComponent();
             var list = TripDAO.GetAll();
             list.ForEach(e => Debug.WriteLine(e));
+            ListViewMenu.SelectedIndex = 0;
         }
 
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -37,10 +38,6 @@ namespace WeSplitApp
             switch (index)
             {
                 case 0:
-                    if (MainGrid == null)
-                    {
-                        return;
-                    }
                     //HomeScreen
                     MainGrid.Children.Clear();
                     MainGrid.Children.Add(new HomeScreen());

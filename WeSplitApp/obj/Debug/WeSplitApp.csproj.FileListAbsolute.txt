@@ -20,10 +20,8 @@ C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\WeSplitApp.csproj.CoreCo
 C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\WeSplitApp.csproj.CopyComplete
 C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\WeSplitApp.exe
 C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\WeSplitApp.pdb
-C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\View\AddScreen.g.cs
 C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\View\DetailScreen.g.cs
 C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\View\HomeScreen.g.cs
-C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\View\AddScreen.baml
 C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\View\DetailScreen.baml
 C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\View\HomeScreen.baml
 C:\Users\v\source\repos\WeSplitApp\WeSplitApp\bin\Debug\data.json
@@ -145,3 +143,12 @@ C:\Users\CaoPhuc\Desktop\csharp\ver2\WeSplitApp\WeSplitApp\obj\Debug\WeSplitApp.
 C:\Users\CaoPhuc\Desktop\csharp\ver2\WeSplitApp\WeSplitApp\obj\Debug\WeSplitApp.csproj.CopyComplete
 C:\Users\CaoPhuc\Desktop\csharp\ver2\WeSplitApp\WeSplitApp\obj\Debug\WeSplitApp.exe
 C:\Users\CaoPhuc\Desktop\csharp\ver2\WeSplitApp\WeSplitApp\obj\Debug\WeSplitApp.pdb
+C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\Style\IconButtonStyle.baml
+C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\SplashScreen.g.cs
+C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\View\AddScreen\AddExpenses.g.cs
+C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\View\AddScreen\AddMembers.g.cs
+C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\View\AddScreen\AddScreen.g.cs
+C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\SplashScreen.baml
+C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\View\AddScreen\AddExpenses.baml
+C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\View\AddScreen\AddMembers.baml
+C:\Users\v\source\repos\WeSplitApp\WeSplitApp\obj\Debug\View\AddScreen\AddScreen.baml
