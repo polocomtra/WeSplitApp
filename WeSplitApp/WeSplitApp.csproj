@@ -69,6 +69,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converter\AbsoluteConverter.cs" />
+    <Compile Include="Converter\VNCharacterUtils.cs" />
     <Compile Include="Models\Trip.cs" />
     <Compile Include="Models\TripDAO.cs" />
     <Compile Include="SplashScreen.xaml.cs">

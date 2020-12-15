@@ -5,12 +5,70 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WeSplitApp.View"
              mc:Ignorable="d" 
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" xmlns:local1="clr-namespace:WeSplitApp.Converter"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+             xmlns:local1="clr-namespace:WeSplitApp.Converter"
              d:DesignHeight="650" d:DesignWidth="1024">
     <UserControl.Resources>
         <local1:AbsoluteConverter x:Key="AbsoluteConverter"></local1:AbsoluteConverter>
     </UserControl.Resources>
     <DockPanel Background="#fefefe" LastChildFill="True">
+        <Border 
+            Height="40" 
+            Margin="30, 10"
+            BorderThickness="1"
+            BorderBrush="#25C5E6"
+            CornerRadius="5"
+            DockPanel.Dock="Top"
+            >
+            <DockPanel >
+                <ComboBox
+                    x:Name="SearchComboBox"
+                    Width="150"
+                    Background="Transparent"
+                    SelectedIndex="0"
+                    Margin="10"
+                    Height="30"
+                    DockPanel.Dock="Left"
+                    >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock
+                                Text="{Binding}"
+                                FontSize="16"
+                                Foreground="#25C5E6"
+                                >
+                            </TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <Rectangle Width="1" Fill="Gray" Margin="0, 4, 5, 4" DockPanel.Dock="Left"></Rectangle>
+
+                <Button 
+                    DockPanel.Dock="Right"
+                    Style="{StaticResource IconButtonStyle}"
+                    Width="40"
+                    Height="40"
+                    Click="SearchButton_Click"
+                    >
+                    <materialDesign:PackIcon Kind="Search" Foreground="#25C5E6" Width="30" Height="30"/>
+                </Button>
+
+                <Rectangle Width="1" Fill="Gray" Margin="0, 4, 5, 4" DockPanel.Dock="Right"></Rectangle>
+
+                <TextBox
+                    x:Name="SearchTextBox"
+                    materialDesign:HintAssist.Hint="Tìm kiếm"
+                    Height="30"
+                    BorderThickness="0"
+                    materialDesign:TextFieldAssist.DecorationVisibility="Collapsed"
+                    Margin="0, 5, 0, 0"
+                    KeyDown="SearchTextBox_KeyDown"
+                    >
+                </TextBox>
+            </DockPanel>
+        </Border>
+
         <TextBlock DockPanel.Dock="Top"  Text="DANH SÁCH CHUYẾN ĐI" FontSize="23" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#001EC7" Padding="0 10 0 0" ></TextBlock>
         <StackPanel Orientation="Vertical" ScrollViewer.VerticalScrollBarVisibility="Auto">
             <Separator />
