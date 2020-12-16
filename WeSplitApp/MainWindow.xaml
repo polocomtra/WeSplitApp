@@ -13,7 +13,7 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="WeSplit" Height="650" Width="1024" WindowStartupLocation="CenterScreen" ResizeMode="CanResize" Icon="Images/road_icon.ico">
+        Title="WeSplit" Height="720" Width="1024" WindowStartupLocation="CenterScreen" ResizeMode="CanResize" Icon="Images/road_icon.ico">
     <Grid MouseDown="Grid_MouseDown">
         <DockPanel LastChildFill="True">
             <Grid DockPanel.Dock="Top" Background="#25C5E6" Height="50">
@@ -39,12 +39,6 @@
                     </ListViewItem>
                     <ListViewItem Height="50" Width="150">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="Search" Width="30" Height="30" VerticalAlignment="Center" Margin="5" />
-                            <TextBlock Text="Search" FontSize="17" VerticalAlignment="Center" FontWeight="Bold" Margin="5 0"></TextBlock>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem Height="50" Width="150">
-                        <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Add" Width="30" Height="30" VerticalAlignment="Center" Margin="5" />
                             <TextBlock Text="Add" FontSize="17" VerticalAlignment="Center" FontWeight="Bold" Margin="5 0"></TextBlock>
                         </StackPanel>
@@ -52,7 +46,6 @@
                 </ListView>
             </Grid>
             <Grid x:Name="MainGrid" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
-
         </DockPanel>
     </Grid>
 </Window>

@@ -44,17 +44,11 @@ namespace WeSplitApp
                     break;
                 case 1:
                     MainGrid.Children.Clear();
-                    //SearchScreen
-                    //MainGrid.Children.Add(new DetailScreen());
-                    break;
-                case 2:
-                    MainGrid.Children.Clear();
                     //AddScreen
                     MainGrid.Children.Add(new AddScreen());
                     break;
             }
         }
-
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
