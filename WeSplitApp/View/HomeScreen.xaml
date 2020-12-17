@@ -71,7 +71,7 @@
             <Separator />
             <StackPanel>
                 <TextBlock Text="Tất cả chuyến đi" FontSize="18" FontWeight="DemiBold" FontStyle="Italic" Padding="10 0 0 0"></TextBlock>
-                <ListView x:Name="allJourney" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <ListView x:Name="allJourney" ScrollViewer.HorizontalScrollBarVisibility="Auto" PreviewMouseLeftButtonUp="allJourney_SelectionChanged">
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel></WrapPanel>
@@ -91,7 +91,7 @@
             <Separator />
             <StackPanel>
                 <TextBlock Text="Đã đi" FontSize="18" FontWeight="DemiBold" FontStyle="Italic" Padding="10 0 0 0"></TextBlock>
-                <ListView x:Name="completedJourney" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <ListView x:Name="completedJourney" ScrollViewer.HorizontalScrollBarVisibility="Auto" PreviewMouseLeftButtonUp="completedJourney_SelectionChanged">
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel></WrapPanel>
@@ -111,7 +111,7 @@
             <Separator />
             <StackPanel>
                 <TextBlock Text="Đang đi" FontSize="18" FontWeight="DemiBold" FontStyle="Italic" Padding="10 0 0 0"></TextBlock>
-                <ListView x:Name="currentJourney" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                <ListView x:Name="currentJourney" ScrollViewer.HorizontalScrollBarVisibility="Auto" PreviewMouseLeftButtonUp="currentJourney_SelectionChanged">
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel></WrapPanel>

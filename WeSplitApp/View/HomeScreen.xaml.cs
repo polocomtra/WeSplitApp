@@ -122,5 +122,42 @@ namespace WeSplitApp.View
             return result;
         }
 
+
+        private void allJourney_SelectionChanged(object sender, MouseButtonEventArgs e)
+        {
+            var index = allJourney.SelectedIndex;
+            if (index >= 0 && index < data.Count) //??????
+            {
+                Trip r = data[index];
+                DetailScreen detail = new DetailScreen(r);
+                detail.Show();
+                detail.Topmost = true;
+            }
+        }
+
+        private void completedJourney_SelectionChanged(object sender, MouseButtonEventArgs e)
+        {
+            var index = completedJourney.SelectedIndex;
+            if (index >= 0 && index < completedJourneyObj.Count) //??????
+            {
+                Trip r = completedJourneyObj[index];
+                DetailScreen detail = new DetailScreen(r);
+                detail.Show();
+                detail.Topmost = true;
+            }
+        }
+
+        private void currentJourney_SelectionChanged(object sender, MouseButtonEventArgs e)
+        {
+            var index = currentJourney.SelectedIndex;
+            if (index >= 0 && index < currentJourneyObj.Count) //??????
+            {
+                Trip r = currentJourneyObj[index];
+                DetailScreen detail = new DetailScreen(r);
+                detail.Show();
+                detail.Topmost = true;
+            }
+        }
+
     }
 }

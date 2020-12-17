@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace WeSplitApp.Models
 {
-    class TripExpense
+    public class TripExpense
     {
         public string Description { get; set; }
         public double Cost { get; set; }
@@ -13,7 +13,7 @@ namespace WeSplitApp.Models
             return $"-TripExpense: Description: {Description}, Cost: {Cost}-";
         }
     }
-    class Member
+    public class Member
     {
         public string Name { get; set; }
         public List<TripExpense> Expenses { get; set; }
@@ -23,7 +23,7 @@ namespace WeSplitApp.Models
             return $"-Member: Name: \"{Name}\", ExpensesCount: {Expenses.Count}-";
         }
     }
-    class Trip
+    public class Trip
     {
         public int ID { get; set; }
         public string Name { get; set; }
