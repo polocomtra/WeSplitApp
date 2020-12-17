@@ -3,6 +3,11 @@
     "ID": 0,
     "Name": "Chuyến Đi Rực Lửa",
     "Place": "Hòn Khói",
+    "Step": [
+      "Nhà thờ",
+      "Hồ",
+      "Chợ"
+    ],
     "Images": [
       "Images/Trip/salt-3060092_1280.jpg",
       "Images/Trip/salt-3060095_1280.jpg",
@@ -57,6 +62,11 @@
     "ID": 1,
     "Name": "Chuyến Đi Mát Mẻ",
     "Place": "Vũng Tàu",
+    "Step": [
+      "Nhà thờ",
+      "Hồ",
+      "Chợ"
+    ],
     "Images": [
       "Images/Trip/beach-3264058_1280.jpg",
       "Images/Trip/sunset-165077_1280.jpg",
@@ -98,6 +108,11 @@
     "ID": 2,
     "Name": "Chuyến Đi Xanh Tươi",
     "Place": "Thái Nguyên",
+    "Step": [
+      "Nhà thờ",
+      "Hồ",
+      "Chợ"
+    ],
     "Images": [
       "Images/Trip/dawn-2264494_1280.jpg",
       "Images/Trip/tea-5112953_1280.jpg"
@@ -142,6 +157,11 @@
     "ID": 3,
     "Name": "Chuyến Đi Sắc Màu",
     "Place": "Vũng Tàu",
+    "Step": [
+      "Nhà thờ",
+      "Hồ",
+      "Chợ"
+    ],
     "Images": [
       "Images/Trip/beach-3264058_1280.jpg",
       "Images/Trip/sunset-165077_1280.jpg",
@@ -168,6 +188,11 @@
     "ID": 4,
     "Name": "Chuyến Đi Nóng Bức",
     "Place": "Ruộng Lúa",
+    "Step": [
+      "Nhà thờ",
+      "Hồ",
+      "Chợ"
+    ],
     "Images": [
       "Images/Trip/nature-4953021_1280.jpg",
       "Images/Trip/sunset-5222626_1280.jpg",

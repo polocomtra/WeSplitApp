@@ -30,6 +30,7 @@ namespace WeSplitApp.Models
         public string Place { get; set; }
         public List<string> Images { get; set; }
         public int Status { get; set; }
+        public List<string> Step { get; set; }
 
         public List<Member> Members;
 

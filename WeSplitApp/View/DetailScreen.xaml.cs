@@ -18,6 +18,9 @@ using System.Text.RegularExpressions;
 using System.IO;
 using Microsoft.Win32;
 using WeSplitApp.Models;
+using LiveCharts;
+using LiveCharts.Wpf;
+
 
 namespace WeSplitApp.View
 {
@@ -41,6 +44,8 @@ namespace WeSplitApp.View
             TripLabel.Content = SelectedTrip.Name;
             ImagesListView.ItemsSource = SelectedTrip.Images;
             MembersListView.ItemsSource = SelectedTrip.Members;
+            StepListView.ItemsSource = SelectedTrip.Step;
+            DrawChart();         
         }
 
         private void AddTripImageButton_Click(object sender, RoutedEventArgs e)
@@ -82,14 +87,14 @@ namespace WeSplitApp.View
             Member mem = new Member();
             mem.Name = MemberNameTextBox.Text;
             mem.Expenses = new List<TripExpense>();
-            MemberNameTextBox.Text = "";
             if (!string.IsNullOrEmpty(mem.Name) && !SelectedTrip.Members.Exists(x => x.Name.Equals(mem.Name)))
             {
                 SelectedTrip.Members.Add(mem);
+                TripDAO.Update(SelectedTrip);
+                MemberNameTextBox.Text = "";
+                MembersListView.Items.Refresh();
+                DrawChart();
             }
-
-            TripDAO.Update(SelectedTrip);
-            MembersListView.Items.Refresh();
         }
 
         private void Member_Click(object sender, MouseButtonEventArgs e)
@@ -117,6 +122,7 @@ namespace WeSplitApp.View
                     ExpenseCostTextBox.Text = "";
                     TripDAO.Update(SelectedTrip);
                     ExpensesListView.Items.Refresh();
+                    DrawChart();
                 }
                 else
                 {
@@ -141,6 +147,56 @@ namespace WeSplitApp.View
                 scrollViewer.LineLeft();
             }
             e.Handled = true;
+        }
+
+        private void DrawChart()
+        {
+            List<string> name = new List<string>();
+            List<double> totalCostOf = new List<double>();
+            foreach (Member m in SelectedTrip.Members)
+            {
+                name.Add(m.Name);
+                double sum = 0;
+                foreach (TripExpense e in m.Expenses)
+                {
+                    sum += e.Cost;
+                }
+                totalCostOf.Add(sum);
+            }
+            foreach (string s in name)
+            {
+                Debug.WriteLine(s);
+            }
+            foreach (double s in totalCostOf)
+            {
+                Debug.WriteLine(s);
+            }
+ 
+            ExpensesChart.Series = new LiveCharts.SeriesCollection();
+            for (int i = 0; i < name.Count; i++)
+            {
+                PieSeries x = new PieSeries
+                {
+                    Title = name[i],
+                    Values = new ChartValues<double> { totalCostOf[i] },
+                    DataLabels = true,
+                };
+                ExpensesChart.Series.Add(x);
+            }
+
+
+        }
+
+        private void AddStepButton_Click(object sender, RoutedEventArgs e)
+        {
+            string step = StepNameTextBox.Text;
+            if (!string.IsNullOrEmpty(step) && !SelectedTrip.Step.Exists(x => x.Equals(step)))
+            {
+                SelectedTrip.Step.Add(step);
+                TripDAO.Update(SelectedTrip);
+                StepNameTextBox.Text = "";
+                StepListView.Items.Refresh();
+            }
         }
     }
 }

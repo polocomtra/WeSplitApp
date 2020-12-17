@@ -8,17 +8,17 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
-        Title="DetailScreen" Height="650" Width="850" WindowStartupLocation="CenterScreen">
+        Title="Chi tiết chuyến đi" Height="650" Width="1100" WindowStartupLocation="CenterScreen" Icon="../Images/road_icon.ico">
     <Window.Resources>
         <local1:AbsoluteConverter x:Key="AbsoluteConverter"></local1:AbsoluteConverter>
     </Window.Resources>
     <StackPanel Background="#fefefe">
         <Label Name="TripLabel" FontWeight="Bold" FontSize="50" Margin="20,0,0,0"></Label>
         <DockPanel Margin="0,15,0,15">
-            <Button
+            <Button Style="{StaticResource MaterialDesignIconButton}"
             x:Name="AddTripImageButton"
             Panel.ZIndex="1"
-            Margin="15,15,-20,15"
+            Margin="15,15,10,15"
             Height="30"
             Width="30"
 
@@ -26,6 +26,7 @@
             ToolTip="Thêm ảnh"
           
             >
+                <materialDesign:PackIcon Kind="Plus"/>
             </Button>
             <ScrollViewer PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" >
                 <ListView x:Name="ImagesListView" ScrollViewer.CanContentScroll="False" >
@@ -46,6 +47,31 @@
 
 
         <StackPanel Orientation="Horizontal" Height="320" Margin="20,0,0,0">
+
+            <StackPanel Width="250">
+                <Label Content="Mốc lộ trình" FontWeight="Bold" Height="35" FontSize="18"></Label>
+                <ListView x:Name="StepListView" Height="235" ScrollViewer.CanContentScroll="False">
+                    <ListView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ListView.ItemsPanel>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding}"></TextBlock>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <DockPanel Margin="0,12,0,0" >
+                    <TextBox x:Name="StepNameTextBox" Width="200" materialDesign:HintAssist.Hint="Thêm lộ trình" Margin="6,0,0,0">
+                    </TextBox>
+                    <Button Style="{StaticResource MaterialDesignIconButton}" Width="30" Height="30" DockPanel.Dock="Right" Click="AddStepButton_Click" >
+                        <materialDesign:PackIcon Kind="Plus"/>
+                    </Button>
+                </DockPanel>
+            </StackPanel>
+
+
             <StackPanel Width="250">
                 <Label Content="Thành viên" FontWeight="Bold" Height="35" FontSize="18"></Label>
                 <ListView x:Name="MembersListView" PreviewMouseLeftButtonUp="Member_Click" Height="235" ScrollViewer.CanContentScroll="False">
@@ -63,7 +89,8 @@
                 <DockPanel Margin="0,12,0,0" >
                     <TextBox x:Name="MemberNameTextBox" Width="200" materialDesign:HintAssist.Hint="Thêm thành viên" Margin="6,0,0,0">
                     </TextBox>
-                    <Button Width="30" Height="30" DockPanel.Dock="Right" Click="AddMemberButton_Click">
+                    <Button Style="{StaticResource MaterialDesignIconButton}" Width="30" Height="30" DockPanel.Dock="Right" Click="AddMemberButton_Click" >
+                        <materialDesign:PackIcon Kind="Plus"/>
                     </Button>
                 </DockPanel>
             </StackPanel>
@@ -87,11 +114,16 @@
                 <DockPanel Visibility="Collapsed" Name="AddExpense" Margin="0,12,0,0" >
                     <TextBox Name="ExpenseDescriptionTextBox" Width="94" Margin="6,0,0,0" materialDesign:HintAssist.Hint="Thêm khoản chi"></TextBox>
                     <TextBox Name="ExpenseCostTextBox" Width="94" Margin="6,0,0,0" materialDesign:HintAssist.Hint="Chi phí"></TextBox>
-                    <Button Name="AddExpenseButton" Click="AddExpenseButton_Click" Width="30" Height="30" DockPanel.Dock="Right"></Button>
+                    <Button Name="AddExpenseButton" Style="{StaticResource MaterialDesignIconButton}" Click="AddExpenseButton_Click" Width="30" Height="30" DockPanel.Dock="Right">
+                        <materialDesign:PackIcon Kind="Plus"/>
+                    </Button>
                 </DockPanel>
             </StackPanel>
-            <StackPanel>
+            <StackPanel Width="283">
                 <Label Content="Biểu đồ" FontWeight="Bold" Height="35" FontSize="18"></Label>
+                <lvc:PieChart x:Name="ExpensesChart" LegendLocation="Bottom" Hoverable="False" DataTooltip="{x:Null}" Height="250">
+                    
+                </lvc:PieChart>
             </StackPanel>
         </StackPanel>
     </StackPanel>
