@@ -4,8 +4,8 @@
     "Name": "Chuyến Đi Rực Lửa",
     "Place": "Hòn Khói",
     "Step": [
-      "Nhà thờ",
-      "Hồ",
+      "Biển",
+      "Núi",
       "Chợ"
     ],
     "Images": [
@@ -63,9 +63,10 @@
     "Name": "Chuyến Đi Mát Mẻ",
     "Place": "Vũng Tàu",
     "Step": [
-      "Nhà thờ",
-      "Hồ",
-      "Chợ"
+      "Biển",
+      "Thành phố",
+      "Chợ",
+      "Long Hải"
     ],
     "Images": [
       "Images/Trip/beach-3264058_1280.jpg",
@@ -96,11 +97,20 @@
       {
         "Name": "Lưu Cao Tiến",
         "Expenses": [
+          {
+            "Description": "Đồ ăn",
+            "Cost": 30000
+          }
         ]
       },
       {
         "Name": "Vưu Quốc Văn",
-        "Expenses": []
+        "Expenses": [
+          {
+            "Description": "Nước uống",
+            "Cost": 50000
+          }
+        ]
       }
     ]
   },
@@ -109,9 +119,9 @@
     "Name": "Chuyến Đi Xanh Tươi",
     "Place": "Thái Nguyên",
     "Step": [
-      "Nhà thờ",
-      "Hồ",
-      "Chợ"
+      "Đồi chè Tân Cương",
+      "Suối Cửa Tử",
+      "Hang Chùa"
     ],
     "Images": [
       "Images/Trip/dawn-2264494_1280.jpg",
@@ -149,7 +159,12 @@
       },
       {
         "Name": "Lâm Thanh Vinh",
-        "Expenses": []
+        "Expenses": [
+          {
+            "Description": "Xe",
+            "Cost": 350000
+          }
+        ]
       }
     ]
   },
@@ -158,8 +173,8 @@
     "Name": "Chuyến Đi Sắc Màu",
     "Place": "Vũng Tàu",
     "Step": [
-      "Nhà thờ",
-      "Hồ",
+      "Mũi Nghinh Phong",
+      "Bãi sau",
       "Chợ"
     ],
     "Images": [
@@ -171,16 +186,35 @@
     "Members": [
       {
         "Name": "Võ Tuấn Tài",
-        "Expenses": []
+        "Expenses": [
+          {
+            "Description": "Xăng",
+            "Cost": 100000
+          }
+        ]
       },
 
       {
         "Name": "Lưu Cao Tiến",
-        "Expenses": []
+        "Expenses": [
+          {
+            "Description": "Yogourt",
+            "Cost": 125000
+          }
+        ]
       },
       {
         "Name": "Vưu Quốc Văn",
-        "Expenses": []
+        "Expenses": [
+          {
+            "Description": "Bánh xèo",
+            "Cost": 100000
+          },
+          {
+            "Description": "Bánh khọt",
+            "Cost": 150000
+          }
+        ]
       }
     ]
   },
@@ -203,20 +237,344 @@
     "Members": [
       {
         "Name": "Phạm Công Hiếu",
-        "Expenses": []
+        "Expenses": [
+          {
+            "Description": "Bia",
+            "Cost": 100000
+          }
+        ]
       },
 
       {
         "Name": "Lý Gia Hoàng",
-        "Expenses": []
+        "Expenses": [
+          {
+            "Description": "Khô",
+            "Cost": 10000
+          }
+        ]
       },
       {
         "Name": "Dữu Phước Nhân",
-        "Expenses": []
+        "Expenses": [
+          {
+            "Description": "Snack",
+            "Cost": 20000
+          }
+        ]
       },
       {
         "Name": "Dương Thành Thiện",
-        "Expenses": []
+        "Expenses": [
+          {
+            "Description": "Cồn",
+            "Cost": 5000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": 5,
+    "Name": "Chuyến đi vượt núi",
+    "Place": "Đà Lạt",
+    "Step": [
+      "Miếu 3 Cô",
+      "Nhà thờ Con Gà",
+      "Chợ Đà Lạt"
+    ],
+    "Images": [
+      "Images/DL/dl1.jpg",
+      "Images/DL/dl2.jpg",
+      "Images/DL/dl3.jpg",
+      "Images/DL/dl4.jpg"
+    ],
+    "Status": 0,
+    "Members": [
+      {
+        "Name": "Trà Dương Ngạn",
+        "Expenses": [
+          {
+            "Description": "Vịt",
+            "Cost": 50000
+          }
+        ]
+      },
+
+      {
+        "Name": "Tôn Anh Toản",
+        "Expenses": [
+          {
+            "Description": "Strongbow",
+            "Cost": 75000
+          }
+        ]
+      },
+      {
+        "Name": "Hạ Hải Phong",
+        "Expenses": [
+          {
+            "Description": "Bò",
+            "Cost": 350000
+          }
+        ]
+      },
+      {
+        "Name": "Mâu Sa",
+        "Expenses": [
+          {
+            "Description": "Phòng",
+            "Cost": 500000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": 6,
+    "Name": "Chuyến đi trùng đảo",
+    "Place": "Vịnh Hạ Long",
+    "Step": [
+      "Hang Đầu Gỗ",
+      "Động Mê Cung",
+      "Hang Trinh Nữ",
+      "Đảo Ti Tốp"
+    ],
+    "Images": [
+      "Images/HL/hl1.jpg",
+      "Images/HL/hl2.jpg",
+      "Images/HL/hl3.jpg",
+      "Images/HL/hl4.jpg"
+    ],
+    "Status": 1,
+    "Members": [
+      {
+        "Name": "Ty Trình",
+        "Expenses": [
+          {
+            "Description": "Bò",
+            "Cost": 350000
+          }
+        ]
+      },
+
+      {
+        "Name": "Khâu Mỹ",
+        "Expenses": [
+          {
+            "Description": "Heo",
+            "Cost": 175000
+          }
+        ]
+      },
+      {
+        "Name": "Hạ Hải Phong",
+        "Expenses": [
+          {
+            "Description": "Dê",
+            "Cost": 285000
+          }
+        ]
+      },
+      {
+        "Name": "Dương Thành Thiện",
+        "Expenses": [
+          {
+            "Description": "Ếch",
+            "Cost": 150000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": 7,
+    "Name": "Chuyến đi cổ kính",
+    "Place": "Hoa Lư - Ninh Bình",
+    "Step": [
+      "Đền Vua Đinh Tiên Hoàng",
+      "Đền Vua Lê Đại Hành",
+      "Hoa Lư Tứ Trấn",
+      "Chùa Nhất Trụ"
+    ],
+    "Images": [
+      "Images/NB/nb1.jpg",
+      "Images/NB/nb2.jpg",
+      "Images/NB/nb3.jpg",
+      "Images/NB/nb4.jpg"
+    ],
+    "Status": 0,
+    "Members": [
+      {
+        "Name": "Phạm Công Hiếu",
+        "Expenses": [
+          {
+            "Description": "Dù",
+            "Cost": 50000
+          }
+        ]
+      },
+
+      {
+        "Name": "Lý Gia Hoàng",
+        "Expenses": [
+          {
+            "Description": "Bò",
+            "Cost": 350000
+          }
+        ]
+      },
+      {
+        "Name": "Chế Hoài Hoan",
+        "Expenses": [
+          {
+            "Description": "Rượu",
+            "Cost": 570000
+          },
+          {
+            "Description": "Bếp",
+            "Cost": 30000
+          }
+        ]
+      },
+      {
+        "Name": "Mã Chiêu Kiều",
+        "Expenses": [
+          {
+            "Description": "Phòng",
+            "Cost": 200000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": 8,
+    "Name": "Chuyến đi thanh xuân",
+    "Place": "Nha Trang - Khánh Hòa",
+    "Step": [
+      "Bãi dài Cam Ranh",
+      "Bãi biển Đại Lãnh",
+      "Bãi biển Dốc Lết",
+      "Hòn Mun"
+    ],
+    "Images": [
+      "Images/NT/nt1.jpg",
+      "Images/NT/nt2.jpg",
+      "Images/NT/nt3.jpg",
+      "Images/NT/nt4.jpg"
+    ],
+    "Status": 1,
+    "Members": [
+      {
+        "Name": "Phạm Công Hiếu",
+        "Expenses": [
+          {
+            "Description": "Bia",
+            "Cost": 380000
+          }
+        ]
+      },
+
+      {
+        "Name": "Thiều Lễ",
+        "Expenses": [
+          {
+            "Description": "Thịt nướng",
+            "Cost": 270000
+          }
+        ]
+      },
+      {
+        "Name": "Dữu Phước Nhân",
+        "Expenses": [
+          {
+            "Description": "Bếp",
+            "Cost": 50000
+          },
+          {
+            "Description": "Khăn",
+            "Cost": 25000
+          }
+        ]
+      },
+      {
+        "Name": "Tào Trưởng",
+        "Expenses": [
+          {
+            "Description": "Than",
+            "Cost": 15000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "ID": 9,
+    "Name": "Chuyến đi vượt biển",
+    "Place": "Phú Quốc",
+    "Step": [
+      "Mũi Gành Dầu",
+      "Bãi dài",
+      "Trại nuôi chó xoáy Phú Quốc",
+      "Vườn Tiêu"
+    ],
+    "Images": [
+      "Images/PQ/pq1.jpg",
+      "Images/PQ/pq2.jpg",
+      "Images/PQ/pq3.jpg",
+      "Images/PQ/pq4.jpg"
+    ],
+    "Status": 1,
+    "Members": [
+      {
+        "Name": "Đàm Ngạn",
+        "Expenses": [
+          {
+            "Description": "Đồ ăn",
+            "Cost": 200000
+          },
+          {
+            "Description": "Khô",
+            "Cost": 75000
+          }
+        ]
+      },
+
+      {
+        "Name": "Lý Gia Hoàng",
+        "Expenses": [
+          {
+            "Description": "Bếp",
+            "Cost": 50000
+          }
+        ]
+      },
+      {
+        "Name": "Dữu Phước Nhân",
+        "Expenses": [
+          {
+            "Description": "Nước",
+            "Cost": 10000
+          },
+          {
+            "Description": "Khăn",
+            "Cost": 20000
+          }
+        ]
+      },
+      {
+        "Name": "Hán Công",
+        "Expenses": [
+          {
+            "Description": "Dù",
+            "Cost": 50000
+          },
+          {
+            "Description": "Khoai",
+            "Cost": 30000
+          }
+        ]
       }
     ]
   }

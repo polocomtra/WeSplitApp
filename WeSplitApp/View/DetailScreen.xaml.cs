@@ -42,6 +42,7 @@ namespace WeSplitApp.View
             SelectedTrip = trip;
             Debug.WriteLine(SelectedTrip);
             TripLabel.Content = SelectedTrip.Name;
+            PlaceLabel.Content = SelectedTrip.Place;
             ImagesListView.ItemsSource = SelectedTrip.Images;
             MembersListView.ItemsSource = SelectedTrip.Members;
             StepListView.ItemsSource = SelectedTrip.Step;

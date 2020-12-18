@@ -8,12 +8,17 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         mc:Ignorable="d"
-        Title="Chi tiết chuyến đi" Height="650" Width="1100" WindowStartupLocation="CenterScreen" Icon="../Images/road_icon.ico">
+        Title="Chi tiết chuyến đi" Height="750" Width="1100" WindowStartupLocation="CenterScreen" Icon="../Images/road_icon.ico">
     <Window.Resources>
         <local1:AbsoluteConverter x:Key="AbsoluteConverter"></local1:AbsoluteConverter>
     </Window.Resources>
     <StackPanel Background="#fefefe">
-        <Label Name="TripLabel" FontWeight="Bold" FontSize="50" Margin="20,0,0,0"></Label>
+        <Label Name="TripLabel" FontWeight="Bold" FontSize="40" Margin="20,0,0,0" HorizontalContentAlignment="Center" Foreground="#6159F5"></Label>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock FontWeight="Bold" FontSize="25" Text="Địa điểm:" Margin="20 0 0 0"></TextBlock>
+            <Label Name="PlaceLabel" FontWeight="Bold" FontSize="20" Margin="10,0,0,0"></Label>
+        </StackPanel>
+        <Separator></Separator>
         <DockPanel Margin="0,15,0,15">
             <Button Style="{StaticResource MaterialDesignIconButton}"
             x:Name="AddTripImageButton"
@@ -45,11 +50,11 @@
             </ScrollViewer>
         </DockPanel>
 
-
+        <Separator></Separator>
         <StackPanel Orientation="Horizontal" Height="320" Margin="20,0,0,0">
 
             <StackPanel Width="250">
-                <Label Content="Mốc lộ trình" FontWeight="Bold" Height="35" FontSize="18"></Label>
+                <Label Content="Mốc lộ trình" FontWeight="Bold" Height="35" FontSize="18" HorizontalContentAlignment="Center"></Label>
                 <ListView x:Name="StepListView" Height="235" ScrollViewer.CanContentScroll="False">
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -73,7 +78,7 @@
 
 
             <StackPanel Width="250">
-                <Label Content="Thành viên" FontWeight="Bold" Height="35" FontSize="18"></Label>
+                <Label Content="Thành viên" FontWeight="Bold" Height="35" FontSize="18" HorizontalContentAlignment="Center"></Label>
                 <ListView x:Name="MembersListView" PreviewMouseLeftButtonUp="Member_Click" Height="235" ScrollViewer.CanContentScroll="False">
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -95,7 +100,7 @@
                 </DockPanel>
             </StackPanel>
             <StackPanel Width="250">
-                <Label Content="Chi tiêu" FontWeight="Bold" Height="35" FontSize="18"></Label>
+                <Label Content="Chi tiêu" FontWeight="Bold" Height="35" FontSize="18" HorizontalContentAlignment="Center"></Label>
                 <ListView x:Name="ExpensesListView" Height="235" ScrollViewer.CanContentScroll="False">
                     <ListView.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -120,7 +125,7 @@
                 </DockPanel>
             </StackPanel>
             <StackPanel Width="283">
-                <Label Content="Biểu đồ" FontWeight="Bold" Height="35" FontSize="18"></Label>
+                <Label Content="Biểu đồ" FontWeight="Bold" Height="35" FontSize="18" HorizontalContentAlignment="Center"></Label>
                 <lvc:PieChart x:Name="ExpensesChart" LegendLocation="Bottom" Hoverable="False" DataTooltip="{x:Null}" Height="250">
                     
                 </lvc:PieChart>

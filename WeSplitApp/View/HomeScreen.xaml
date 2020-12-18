@@ -14,7 +14,7 @@
     <DockPanel Background="#fefefe" LastChildFill="True">
         <Border 
             Height="40" 
-            Margin="30, 10"
+            Margin="30, 5"
             BorderThickness="1"
             BorderBrush="#25C5E6"
             CornerRadius="5"
@@ -66,7 +66,7 @@
                 </TextBox>
             </DockPanel>
         </Border>
-        <TextBlock DockPanel.Dock="Top"  Text="DANH SÁCH CHUYẾN ĐI" FontSize="23" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#001EC7" Padding="0 10 0 0" ></TextBlock>
+        <TextBlock DockPanel.Dock="Top"  Text="DANH SÁCH CHUYẾN ĐI" FontSize="23" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#001EC7" Padding="0 5 0 0" ></TextBlock>
         <StackPanel Orientation="Vertical" ScrollViewer.VerticalScrollBarVisibility="Auto">
             <Separator />
             <StackPanel>
@@ -79,11 +79,36 @@
                     </ListView.ItemsPanel>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel>
-                                <Image Source="{Binding Images[0],Converter={StaticResource AbsoluteConverter}}" Width="90" Height="90" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold"></TextBlock>
-                                <TextBlock Text="{Binding Place}" FontSize="14" FontWeight="DemiBold"></TextBlock>
-                            </StackPanel>
+                            <materialDesign:Card
+                              Width="200">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition
+                                    Height="90" />
+                                        <RowDefinition
+                                    Height="*" />
+                                        <RowDefinition
+                                    Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Image
+                                  Source="{Binding Images[0],Converter={StaticResource AbsoluteConverter}}"
+                                  RenderOptions.BitmapScalingMode="HighQuality"
+                                  Height="110"
+                                  Width="196"
+                                  Stretch="UniformToFill" />
+                                    <StackPanel
+                                  Grid.Row="1"
+                                  Margin="8 8 8 0">
+                                        <TextBlock
+                                    FontWeight="Bold" Text="{Binding Name}" FontSize="17">
+                                        </TextBlock>
+                                        <TextBlock
+                                    TextWrapping="Wrap"
+                                    VerticalAlignment="Center" Text="{Binding Place}">
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Grid>
+                            </materialDesign:Card>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
@@ -99,11 +124,36 @@
                     </ListView.ItemsPanel>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel>
-                                <Image Source="{Binding Images[0],Converter={StaticResource AbsoluteConverter}}" Width="90" Height="90" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold"></TextBlock>
-                                <TextBlock Text="{Binding Place}" FontSize="14" FontWeight="DemiBold"></TextBlock>
-                            </StackPanel>
+                            <materialDesign:Card
+                              Width="200">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition
+                                    Height="90" />
+                                        <RowDefinition
+                                    Height="*" />
+                                        <RowDefinition
+                                    Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Image
+                                  Source="{Binding Images[0],Converter={StaticResource AbsoluteConverter}}"
+                                  RenderOptions.BitmapScalingMode="HighQuality"
+                                  Height="110"
+                                  Width="196"
+                                  Stretch="UniformToFill" />
+                                    <StackPanel
+                                  Grid.Row="1"
+                                  Margin="8 8 8 0">
+                                        <TextBlock
+                                    FontWeight="Bold" Text="{Binding Name}" FontSize="17">
+                                        </TextBlock>
+                                        <TextBlock
+                                    TextWrapping="Wrap"
+                                    VerticalAlignment="Center" Text="{Binding Place}">
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Grid>
+                            </materialDesign:Card>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
@@ -119,11 +169,36 @@
                     </ListView.ItemsPanel>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel>
-                                <Image Source="{Binding Images[0],Converter={StaticResource AbsoluteConverter}}" Width="90" Height="90" RenderOptions.BitmapScalingMode="HighQuality"></Image>
-                                <TextBlock Text="{Binding Name}" FontSize="16" FontWeight="Bold"></TextBlock>
-                                <TextBlock Text="{Binding Place}" FontSize="14" FontWeight="DemiBold"></TextBlock>
-                            </StackPanel>
+                            <materialDesign:Card
+                              Width="200">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition
+                                    Height="90" />
+                                        <RowDefinition
+                                    Height="*" />
+                                        <RowDefinition
+                                    Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Image
+                                  Source="{Binding Images[0],Converter={StaticResource AbsoluteConverter}}"
+                                  RenderOptions.BitmapScalingMode="HighQuality"
+                                  Height="110"
+                                  Width="196"
+                                  Stretch="UniformToFill" />
+                                    <StackPanel
+                                  Grid.Row="1"
+                                  Margin="8 8 8 0">
+                                        <TextBlock
+                                    FontWeight="Bold" Text="{Binding Name}" FontSize="17">
+                                        </TextBlock>
+                                        <TextBlock
+                                    TextWrapping="Wrap"
+                                    VerticalAlignment="Center" Text="{Binding Place}">
+                                        </TextBlock>
+                                    </StackPanel>
+                                </Grid>
+                            </materialDesign:Card>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
