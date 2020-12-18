@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,33 +34,70 @@ namespace WeSplitApp.View.AddScreen
             }
             else
             {
-                Trip trip = new Trip()
-                {
-                    Name = name,
-                    Place = place,
-                };
+                Trip trip = GetTrip();
+                Insert(trip);
+            }
+        }
 
-                var members = AddMembers.Members.Select(n => new Member() { Name = n, Expenses = new List<TripExpense>() }).ToList();
-                var mbExpenseList = AddExpenses.Expenses.GroupBy(mbe => mbe.MemberName);
-                foreach (var mbGroup in mbExpenseList)
+        private Trip GetTrip()
+        {
+            string name = AddMembers.NameTextBox.Text;
+            string place = AddMembers.PlaceTextBox.Text;
+            string image = "Images/beach.png";
+            if (!string.IsNullOrEmpty(AddMembers.TripImageName))
+            {
+                image = CopyImage(AddMembers.TripImageName);
+            }
+
+            Trip trip = new Trip()
+            {
+                Name = name,
+                Place = place,
+                Images = new List<string>() { image }
+            };
+
+            var members = AddMembers.Members.Select(n => new Member() { Name = n, Expenses = new List<TripExpense>() }).ToList();
+            var mbExpenseList = AddExpenses.Expenses.GroupBy(mbe => mbe.MemberName);
+            foreach (var mbGroup in mbExpenseList)
+            {
+                var member = members.Find(m => m.Name.Equals(mbGroup.Key));
+                if (member != null)
                 {
-                    var member = members.Find(m => m.Name.Equals(mbGroup.Key));
-                    if (member != null)
-                    {
-                        member.Expenses = mbGroup.Select(mbe => new TripExpense() { Description = mbe.Description, Cost = mbe.Cost }).ToList();
-                    }
-                }
-                trip.Members = members;
-                if (TripDAO.Insert(trip))
-                {
-                    Clear();
-                    MessageBox.Show($"Đã thêm chuyến đi {trip.Name}", "Thêm Chuyến Đi", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Đã xảy ra lỗi không rõ!", "Thêm Chuyến Đi", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+                    member.Expenses = mbGroup.Select(mbe => new TripExpense() { Description = mbe.Description, Cost = mbe.Cost }).ToList();
                 }
             }
+            trip.Members = members;
+            return trip;
+        }
+
+        private void Insert(Trip trip)
+        {
+            if (TripDAO.Insert(trip))
+            {
+                Clear();
+                MessageBox.Show($"Đã thêm chuyến đi {trip.Name}", "Thêm Chuyến Đi", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Đã xảy ra lỗi không rõ!", "Thêm Chuyến Đi", MessageBoxButton.OK, MessageBoxImage.Exclamation);
+            }
+        }
+
+        private String CopyImage(String filename)
+        {
+            string imageName = System.IO.Path.GetFileName(filename);
+            string imageRP = "Images/" + imageName;
+            string imagePath = AppDomain.CurrentDomain.BaseDirectory + imageRP;
+            var prefix = 0;
+
+            while (File.Exists(imagePath))
+            {
+                prefix += 1;
+                imageRP = "Images/i" + prefix + imageName;
+                imagePath = AppDomain.CurrentDomain.BaseDirectory + imageRP;
+            }
+            File.Copy(filename, imagePath);
+            return imageRP;
         }
 
         private void Clear()

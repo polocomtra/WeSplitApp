@@ -13,8 +13,8 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0">
-            <StackPanel Height="140">
+        <DockPanel Grid.Column="0">
+            <StackPanel Height="140" DockPanel.Dock="Top">
                 <TextBox 
                     x:Name="NameTextBox"
                     Width="300" 
@@ -38,7 +38,19 @@
                     >
                 </TextBox>
             </StackPanel>
-        </Grid>
+            <DockPanel Margin="30">
+                <Button 
+                    Margin="0, 10, 0, 0"
+                    DockPanel.Dock="Bottom"
+                    Style="{StaticResource IconButtonStyle}"
+                    Click="EditImageButton_Click"
+                    >
+                    <materialDesign:PackIcon Kind="ImageEditOutline" Width="35" Height="35" Foreground="#39C523"/>
+                </Button>
+                <Image x:Name="TripImage" DockPanel.Dock="Top">
+                </Image>
+            </DockPanel>
+        </DockPanel>
 
         <DockPanel Grid.Column="1">
             <DockPanel DockPanel.Dock="Top" Height="55" Margin="10" MaxWidth="300">
