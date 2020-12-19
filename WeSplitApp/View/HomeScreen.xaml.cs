@@ -132,6 +132,7 @@ namespace WeSplitApp.View
                 DetailScreen detail = new DetailScreen(r);
                 detail.Show();
                 detail.Topmost = true;
+                allJourney.UnselectAll();
             }
         }
 
@@ -144,6 +145,7 @@ namespace WeSplitApp.View
                 DetailScreen detail = new DetailScreen(r);
                 detail.Show();
                 detail.Topmost = true;
+                completedJourney.UnselectAll();
             }
         }
 
@@ -156,8 +158,8 @@ namespace WeSplitApp.View
                 DetailScreen detail = new DetailScreen(r);
                 detail.Show();
                 detail.Topmost = true;
+                currentJourney.UnselectAll();
             }
         }
-
     }
 }

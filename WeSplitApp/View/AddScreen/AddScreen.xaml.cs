@@ -53,7 +53,9 @@ namespace WeSplitApp.View.AddScreen
             {
                 Name = name,
                 Place = place,
-                Images = new List<string>() { image }
+                Images = new List<string>() { image },
+                Step = new List<string>(),
+                Status = 1
             };
 
             var members = AddMembers.Members.Select(n => new Member() { Name = n, Expenses = new List<TripExpense>() }).ToList();
